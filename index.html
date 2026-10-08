@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Методичні рекомендації з одиниць вимірювання в CSS</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #315c8c;
+            color: white;
+            padding: 20px;
+        }
+
+        nav {
+            background: #f0f0f0;
+            padding: 15px;
+            margin: 15px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        main {
+            padding: 10px;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        h2 {
+            font-size: 22px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        h3 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 8px 15px;
+            background: #315c8c;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+            font-size: 16px;
+        }
+
+        aside {
+            background: #f5f5f5;
+            padding: 15px;
+            margin: 20px 0;
+        }
+
+        footer {
+            border-top: 1px solid #aaa;
+            margin-top: 30px;
+            padding-top: 15px;
+        }
+
+        /* Класи для доступності (Accessibility) */
+        .visually-hidden {
+            position: absolute;
+            width: 1px; height: 1px;
+            padding: 0; margin: -1px;
+            overflow: hidden;
+            clip-path: inset(50%);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        .focusable:focus,
+        .focusable:focus-visible {
+            position: static;
+            width: auto; height: auto;
+            margin: 0;
+            clip-path: none;
+            padding: 0.5rem 1rem;
+            background: #fff;
+            color: #000;
+            z-index: 1000;
+            outline: 3px solid #000;
+        }
+
+        [aria-current="page"] {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Посилання пропуску для клавіатурної навігації -->
+    <a class="visually-hidden focusable" href="#main">Перейти до основного вмісту</a>
+
+    <header>
+        <div class="logo">Веб-програмування</div>
+        <nav aria-label="Основна навігація">
+            <ul>
+                <li><a href="#intro" aria-current="page">Вступ</a></li>
+                <li><a href="#units">Одиниці CSS</a></li>
+                <li><a href="#practice">Практика</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+        <h1>Методичні рекомендації з одиниць вимірювання в CSS</h1>
+        <p>Навчальний матеріал з дисципліни «Веб-програмування».</p>
+
+        <section id="intro" aria-labelledby="intro-title">
+            <h2 id="intro-title">Загальні відомості про CSS-одиниці</h2>
+            <p>CSS використовує одиниці вимірювання для задання ширини, висоти, відступів, розмірів шрифтів та інших властивостей.</p>
+
+            <h3>Абсолютні одиниці</h3>
+            <p>До абсолютних одиниць CSS належать px, cm, mm, Q, in, pt і pc.</p>
+
+            <h3>Відносні одиниці</h3>
+            <p>До відносних одиниць належать em, rem, %, vw, vh, vmin і vmax.</p>
+        </section>
+
+        <section id="units" aria-labelledby="units-title">
+            <h2 id="units-title">Одиниці для розмітки</h2>
+            <p>Під час побудови веб-сторінки важливо розрізняти фіксовані та гнучкі розміри.</p>
+        </section>
+
+        <section id="practice" aria-labelledby="practice-title">
+            <h2 id="practice-title">Практичне використання</h2>
+            <button type="button" class="button" onclick="alert('Приклад дії')">Детальніше</button>
+        </section>
+
+        <aside aria-labelledby="side-title">
+            <h2 id="side-title">Корисна інформація</h2>
+            <p>Перевірити CSS можна за допомогою інструментів розробника браузера (F12).</p>
+        </aside>
+
+        <section id="faq" aria-labelledby="faq-title">
+            <h2 id="faq-title">Часті запитання</h2>
+            <details>
+                <summary><strong>Що таке px?</strong></summary>
+                <p>px — це логічний CSS-піксель.</p>
+            </details>
+            <details>
+                <summary><strong>Для чого потрібен rem?</strong></summary>
+                <p>rem використовується для відносного масштабування відповідно до розміру шрифту кореневого елемента.</p>
+            </details>
+        </section>
+    </main>
+
+    <footer>
+        <p>Лабораторна робота № 4. Веб-програмування.</p>
+        <address>Автор: Бондарчук П. С.</address>
+    </footer>
+
+</body>
+</html>
